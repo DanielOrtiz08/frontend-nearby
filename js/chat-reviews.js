@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeSocket() {
     if (!state || !state.token) return;
 
-    socket = io('http://localhost:3000', {
+    socket = io('https://backend-nearby-86jj.onrender.com', {
         auth: {
             token: state.token
         }
@@ -370,4 +370,5 @@ window.handleMessageKeyPress = handleMessageKeyPress;
 window.startChatWithOwner = startChatWithOwner;
 window.openReviewModal = openReviewModal;
 window.handleSubmitReview = handleSubmitReview;
+
 window.loadPropertyReviews = loadPropertyReviews;
